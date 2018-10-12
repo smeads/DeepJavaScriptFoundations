@@ -10,7 +10,7 @@ Notes on Kyle Simpson's course Deep JavaScript Foundations on Frontend Masters
 - A good question to ask when thinking about scope is, _Who is doing the looking?_
 - Scope is a compiled time process. It's at compile time that all scope decisions are made.
 - JavaScript makes two passes before actually executing.
-  ..._ On the first pass, compilation, the lexical scope is set up.
-  ..._ First pass when compiling look for all variable declarations and all the scopes they get added to.
-  ...\_ The compiler and scope manager have a conversations.
+  ...On the first pass, compilation, the lexical scope is set up.
+  ...First pass when compiling look for all variable declarations and all the scopes they get added to.
+  ...The compiler and scope manager have a conversations.
 - The individual unit of scope is the function.
