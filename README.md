@@ -14,3 +14,24 @@ Notes on Kyle Simpson's course Deep JavaScript Foundations on Frontend Masters
 - First pass when compiling look for all variable declarations and all the scopes they get added to.
 - The compiler and scope manager have a conversations.
 - The individual unit of scope is the function.
+- As the JavaScript compiler enters a function, it will begin looking for declaration(s) inside that scope and recursively process them.
+  - Once all scopes have been compiled, the execution phase can begin.
+- As the execution phase continues within the function scope, the same Left-Hand Side (LHS) and Right-Hand Side (RHS) operations are applied.
+  - Things get a little interesting with undeclared variables. They are automatically declared in the global scope.
+  - LHS is the target of an assignment.
+  - RHS is the source of an assignment.
+
+**Scope Manager && Compiler Dialogue**
+
+```javascript
+var foo = "bar";
+
+function bar() {
+  var foo = "baz";
+}
+
+function baz(foo) {
+  foo = "bam";
+  baz = "yay";
+}
+```
